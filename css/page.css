@@ -1,0 +1,182 @@
+@font-face
+{
+    font-family: 'AlfaSlab';
+    src: url('../assets/AlfaSlabOne-Regular.ttf');
+}
+
+body
+{
+    transition: background-color .3s ease-in-out;
+}
+
+/*----------------------------------Title-----------------------------------*/
+body .pageContent h1
+{
+    color: white;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-family: 'AlfaSlab';
+    font-size: 5rem;
+}
+
+body .pageContent
+{
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    
+    margin: 0 auto;
+}
+
+
+/*----------------------------------inputs----------------------------------*/
+body .pageContent form input[type=text]
+{
+    width: calc(100% - 2rem);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    
+    color: #444;
+    
+    font-family: impact;
+    font-size: 2em;
+    
+    border: none;
+    border-radius: .2em;
+}
+
+body .pageContent form input[type=text]::placeholder
+{
+    color: #a2a2a2;
+}
+
+body .pageContent form .buttons
+{
+    margin-bottom: 1rem;
+}
+
+/*---------------------------------Buttons----------------------------------*/
+
+.buttons{float: right;}
+
+.iconedButton
+{
+    display: inline-block;
+    margin-right: 1rem;
+    padding: .2em .5em;
+    overflow: hidden;
+
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+
+    border-radius: .1em;
+}
+
+
+.iconedButton span:nth-child(1)
+{
+    position: inherit;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-left: -.5em;
+    margin-top: -.2em;
+    margin-bottom: -.2em;
+    vertical-align: middle;
+}
+
+.iconedButton span:nth-child(2)
+{
+    margin-left: .4em;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.iconedButton:hover span:nth-child(2)
+{
+    color: #424882;
+}
+
+
+/*----------------------------------Icons-----------------------------------*/
+.iconedButton .convertIcon
+{
+    background-image: url('../assets/convert.svg');
+    background-size: auto 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iconedButton .swapIcon 
+{
+    background-image: url('../assets/swap.svg');
+    background-size: auto 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iconedButton .copyIcon
+{
+    background-image: url('../assets/copy.svg');
+    background-size: auto 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*----------------------------------Colors----------------------------------*/
+.green{background-color: #99cc66;}
+.green span:nth-child(1){background-color: #88bb55;}
+
+.red{background-color: #e15352;}
+.red span:nth-child(1){background-color: #d04241;}
+
+.yellow{background-color: #e0b853;}
+.yellow span:nth-child(1){background-color: #e1a942;}
+
+.white{background-color: #f2f2f2;}
+.white span:nth-child(1){background-color: #ddd;}
+.white span:nth-child(2){color: #666;}
+
+.binarySelected
+{
+    background-color: #0075c4;
+    transition: background-color .3s ease-in-out;
+}
+.binarySelected span:nth-child(1)
+{
+    background-color: #0053a2;
+    transition: background-color .3s ease-in-out;
+}
+.binarySelected span:nth-child(2){color: #fff;}
+
+.octalSelected
+{
+    background-color: #eab420;
+    transition: background-color .3s ease-in-out;
+}
+.octalSelected span:nth-child(1)
+{
+    background-color: #d9a310;
+    transition: background-color .3s ease-in-out;
+}
+.octalSelected span:nth-child(2){color: #fff;}
+
+.hexSelected
+{
+    background-color: #d73007;
+    transition: background-color .3s ease-in-out;
+}
+.hexSelected span:nth-child(1)
+{
+    background-color: #c61007;
+    transition: background-color .3s ease-in-out;
+}
+.hexSelected span:nth-child(2){color: #fff;}
+
+/*----------------------------Background Colors-----------------------------*/
+.blueBg{background-color: #0097e6;}
+.yellowBg{background-color: #fbc531;}
+.redBg{background-color: #e84118;}
+
+

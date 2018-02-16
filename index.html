@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Convertidor</title>
+        
+        <!---------------------------------------------CSS--------------------------------------------->
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/page.css"/>
+        
+        <!----------------------------------------------JS--------------------------------------------->
+        <script type="text/javascript" src="js/globals.js"></script>
+        <script type="text/javascript" src="js/misc.js"></script>
+        <script type="text/javascript" src="js/change-conversion.js"></script>
+        <script type="text/javascript" src="js/decimal-to-binary.js"></script>
+        <script type="text/javascript" src="js/decimal-to-octal.js"></script>
+        <script type="text/javascript" src="js/decimal-to-hex.js"></script>
+        
+    </head>
+    
+    <body class="blueBg">
+        <div class="pageContent">
+            <h1 id="conversorTitle">Decimal a Binario</h1>
+            <form>
+                <input id="numeroAconvertir" type="text" placeholder="Numero a convertir" onkeyup="convert()" />
+
+                <div class="buttons">
+                    <!----------------------------------------Green buttons---------------------------------------->
+                    <!--convert-->
+                    <a href="#" class="iconedButton green" style="margin-right: .2rem;" onclick="convert()">
+                        <span class="convertIcon"></span><!--icon-->
+                        <span>Convertir</span><!--Text-->
+                    </a>
+
+                    <!--copy-->
+                    <a href="#" class="iconedButton green">
+                        <span class="copyIcon"></span><!--icon-->
+                        <span>Copiar resultado</span><!--Text-->
+                    </a>
+                    
+                    
+
+                    <!---------------------------------------Conversion type--------------------------------------->
+                    <!--bin-->
+                    <a href="#" name="conversionType" class="iconedButton white binarySelected" style="margin-right: .2rem;" onclick="changeConversion(this, 'bin')">
+                        <span></span><!--icon-->
+                        <span>Bin</span><!--Text-->
+                    </a>
+                    <!--octal-->
+                    <a href="#" name="conversionType" class="iconedButton white" style="margin-right: .2rem;" onclick="changeConversion(this, 'oct')">
+                        <span></span><!--icon-->
+                        <span>Octal</span><!--Text-->
+                    </a>
+                    <!--hex-->
+                    <a href="#" name="conversionType" class="iconedButton white" style="margin-right: 0;" onclick="changeConversion(this, 'hex')">
+                        <span></span><!--icon-->
+                        <span>Hex</span><!--Text-->
+                    </a>
+                    
+                </div><!--Buttons END-->
+
+                <input id="resultado" type="text" placeholder="Resultado" readonly />
+            </form>
+        </div><!--PageContent END-->
+    </body>
+    
+    
+    <!-------------------------------------on document scripts------------------------------------->
+    <script type="text/javascript">
+        function convert()
+        {
+            numeroAconvertir = document.getElementById('numeroAconvertir').value;
+            numeroAconvertir != 0? numeroAconvertir = numeroAconvertir : numeroAconvertir = 0;
+            resultado = document.getElementById('resultado');
+
+            if(selectedConversion == 'bin')
+            {
+                 resultado.value = decTobinary(numeroAconvertir);
+            }
+            else if(selectedConversion == 'oct')
+            {
+                resultado.value = decToOctal(numeroAconvertir);        
+            }
+            else if(selectedConversion == 'hex')
+            {
+                console.log('hexal conversion');
+                resultado.value = decToHex(numeroAconvertir);        
+            }
+        }
+    </script>
+    
+</html>
